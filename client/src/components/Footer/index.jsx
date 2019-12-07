@@ -4,7 +4,7 @@ import './style.scss'
 const Footer = () => {
     return (
         <footer class="footer">
-            <span>una gran aplicacion que resolvera tu vida!</span>
+            <span>Te ayudaremos a organizar tu vida.</span>
         </footer>
     )
 }

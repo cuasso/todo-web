@@ -8,9 +8,8 @@ body {
 
 .signin-container {
   position: relative;
-  display: grid;
   width: 500px;
-  height: 325px;
+  height: 330px;
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
@@ -26,7 +25,7 @@ h2 {
 }
 
 input {
-  display: block;
+  display: grid;
   height: 55px;
   width: 90%;
   margin: 0 auto;
@@ -68,7 +67,9 @@ input {
 }
 
 .link {
+  display: grid;
   text-decoration: none;
+  padding: 5px;
   margin: 15px;
   text-transform: uppercase;
   color: #858585;
@@ -76,6 +77,11 @@ input {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   text-align: center;
+}
+
+.buttons-container{
+  display: flex;
+  padding: 15px 0 0 0;
 }
 
 button {
