@@ -1,6 +1,7 @@
 import React from 'react'
 import useSingUpForm from '../../hooks/formHooks'
 import './style.scss'
+import Logo from '../Logo'
 
 const Signup = () => {
 
@@ -13,7 +14,8 @@ const Signup = () => {
     const { inputs, handleSubmit, handleInputChange } = useSingUpForm(signup)
     return (
         <div>
-            <div class="container">
+            <Logo/>
+            <div class="signin-container">
                 <h2>login</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="username" placeholder="username" onChange={handleInputChange} value={inputs.username} required />

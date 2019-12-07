@@ -1,0 +1,16 @@
+.logo-container {
+    display: grid;
+    padding: 2vh;
+    img {
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+    }
+    span {
+        text-align: center;
+        color: #414141;
+        font-size: 3vh;
+        font-weight: 550;
+    }
+}
+

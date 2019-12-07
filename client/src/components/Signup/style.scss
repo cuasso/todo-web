@@ -1,25 +1,16 @@
 $field-color: #0a87cfec;
-$regiter-colo: #39af79;
+$regiter-colo: #eb5140;
 
-*{
-  margin:0;
-  padding:0;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
-
-body{
+body {
   font-family: 'Open Sans', sans-serif;
   background:#e2e2e2;
 }
 
-.container{
+.signin-container{
   position:relative;
-  top:200px;
   display:grid;
   width:500px;
-  height:350px;
+  height: 325px;
   background:#fff;
   border-radius:5px;
   overflow:hidden;
@@ -28,7 +19,7 @@ body{
 }
 
 h2{
-  padding:40px;
+  padding: 1% 5%;
   font-weight:lighter;
   text-transform:uppercase;
   color:#414141;
@@ -112,6 +103,7 @@ button{
   span{
     position:absolute;
     display:block;
+    width: fit-content;
     margin:-10px 20%;
     -webkit-transform:translateX(0);
     transform:translateX(0);
