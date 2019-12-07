@@ -12,22 +12,24 @@ const Signup = () => {
 
     const { inputs, handleSubmit, handleInputChange } = useSingUpForm(signup)
     return (
-        <div class="container">
-            <h2>login</h2>
-            <form onSubmit={handleSubmit}>
+        <div>
+            <div class="container">
+                <h2>login</h2>
+                <form onSubmit={handleSubmit}>
                     <input type="text" name="username" placeholder="username" onChange={handleInputChange} value={inputs.username} required />
-                    <br/>
+                    <br />
                     <input type="password" name="password" placeholder="password" onChange={handleInputChange} value={inputs.password} required />
-            </form>
-            <a href="#" class="link">forgot your password?</a><br/>
-            
-            <div>
-                <button class="register">
-                    <span>register</span>
-                </button>
-                <button class="sign in">
-                    <span>sign in</span>
-                </button>
+                </form>
+                <a href="#" class="link">forgot your password?</a><br />
+
+                <div>
+                    <button class="register">
+                        <span>register</span>
+                    </button>
+                    <button class="sign in">
+                        <span>sign in</span>
+                    </button>
+                </div>
             </div>
         </div>
     )
