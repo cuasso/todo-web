@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Singup from './components/Signup';
+import App from './App'
 
-ReactDOM.render(<Singup />, document.getElementById('root'));
+ReactDOM.render(<App />,document.getElementById('root'));

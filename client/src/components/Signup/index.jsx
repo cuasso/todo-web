@@ -13,7 +13,7 @@ const Signup = () => {
 
     const { inputs, handleSubmit, handleInputChange } = useSingUpForm(signup)
     return (
-        <div>
+        <div class="login-container">
             <Logo/>
             <div class="signin-container">
                 <h2>login</h2>
