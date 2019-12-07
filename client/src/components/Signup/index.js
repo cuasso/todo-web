@@ -10,19 +10,26 @@ const Signup = () => {
                 password:${inputs.password}`)
     }
 
-    const {inputs,handleSubmit,handleInputChange} = useSingUpForm(signup)
-    return(
-        <form className="login" onSubmit={handleSubmit}>
+    const { inputs, handleSubmit, handleInputChange } = useSingUpForm(signup)
+    return (
+        <div class="container">
+            <h2>login</h2>
+            <form onSubmit={handleSubmit}>
+                    <input type="text" name="username" placeholder="username" onChange={handleInputChange} value={inputs.username} required />
+                    <br/>
+                    <input type="password" name="password" placeholder="password" onChange={handleInputChange} value={inputs.password} required />
+            </form>
+            <a href="#" class="link">forgot your password?</a><br/>
+            
             <div>
-                <label>Username</label>
-                <input type="text" name="username" onChange={handleInputChange} value={inputs.username} required />
+                <button class="register">
+                    <span>register</span>
+                </button>
+                <button class="sign in">
+                    <span>sign in</span>
+                </button>
             </div>
-            <div>
-                <label>Password</label>
-                <input type="password" name="password" onChange={handleInputChange} value={inputs.password} required />
-            </div>
-            <button type="submit">Sing Up</button>
-        </form>
+        </div>
     )
 }
 

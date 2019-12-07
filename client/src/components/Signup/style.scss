@@ -1,4 +1,127 @@
-.login {
-    display: flex;
-    background: rosybrown;
+$field-color: #0a87cfec;
+$regiter-colo: #39af79;
+
+*{
+  margin:0;
+  padding:0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background:#e2e2e2;
+}
+
+.container{
+  position:relative;
+  top:200px;
+  display:grid;
+  margin-bottom:80px;
+  width:500px;
+  height:350px;
+  background:#fff;
+  border-radius:5px;
+  overflow:hidden;
+  z-index:1;
+}
+
+h2{
+  padding:40px;
+  font-weight:lighter;
+  text-transform:uppercase;
+  color:#414141;
+}
+
+input{
+  display:block;
+  height:55px;
+  width:90%;
+  margin:0 auto;
+  border:none;
+  &::placeholder{
+    -webkit-transform:translateY(0px);
+      transform:translateY(0px);
+    -webkit-transition:.5s;
+      transition:.5s;
+  }
+  &:hover,
+  &:focus,
+  &:active:focus{
+    color:$field-color;
+    outline:none;
+    border-bottom:1px solid $field-color;
+    &::placeholder{
+      color:$field-color;
+      position:relative;
+      font-size: 2ch;
+      -webkit-transform:translateY(-20px);
+      transform:translateY(-20px);
+      
+    }
+  }
+}
+
+
+
+.email,
+.pwd{
+  position:relative;
+  z-index:1;
+  border-bottom:1px solid rgba(0,0,0,.1);
+  padding-left:20px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  color:#858585;
+  font-weight:lighter;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+
+
+.link{
+  text-decoration:none;
+  margin:15px;
+  text-transform:uppercase;
+  color:#858585;
+  font-weight:lighter;
+  -webkit-transition:.5s;
+  transition:.5s;
+  text-align: center;
+}
+
+button{
+  cursor:pointer; 
+  width:250px;
+  height:60px;
+  margin-top:-10px;
+  border:none;
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  color:#fff;
+  -webkit-transition:.5s;
+  transition:.5s;
+  &:nth-of-type(1){
+    background:$regiter-colo;
+  }
+  &:nth-of-type(2){
+    background:$field-color;
+  }
+  span{
+    position:absolute;
+    display:block;
+    margin:-10px 20%;
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+    -webkit-transition:.5s;
+    transition:.5s;
+  }
+  &:hover{
+    span{
+      -webkit-transform:translateX(30px);
+      transform:translateX(30px);
+      }
+   }
 }
