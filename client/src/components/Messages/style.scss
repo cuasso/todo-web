@@ -1,0 +1,18 @@
+.error-message {
+    display: flex;
+    background-color: #f2dede;
+    width: auto;
+    margin-top: 2%;
+    border: 2px solid #f53b3b;
+    border-radius: 7px;    
+    img {
+        align-self: center;
+        height: 40px;
+        width: 40px;
+    }
+    span {
+        align-self: center;
+        color: #f53b3b;
+        padding: 10px 10px 10px 5px;
+    };
+}

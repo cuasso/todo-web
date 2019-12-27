@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState} from 'react'
 
 const useSingUpForm = (callback) => {
     const[inputs,setInputs] = useState({})
@@ -17,9 +17,18 @@ const useSingUpForm = (callback) => {
             [event.target.name]: event.target.value
         }))
     }
+
+    const clearInputs = () => {
+        setInputs({
+            password: '',
+            username: ''
+        })
+    }
+
     return {
         handleSubmit,
         handleInputChange,
+        clearInputs,
         inputs
     }
 }

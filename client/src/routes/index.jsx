@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
-import Signup from '../components/Signup'
+import Signin from '../components/Signin'
 import Home from '../components/Home'
 import NotFound from '../components/NotFound'
 
@@ -9,7 +9,7 @@ const Routing = () => {
         <Router>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/login" component={Signup} />
+                <Route path="/login" component={Signin} />
                 <Route component={NotFound} />
             </Switch>
         </Router>

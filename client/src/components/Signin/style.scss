@@ -1,15 +1,20 @@
 $field-color: #0a87cfec;
-$regiter-colo: #eb5140;
+$regiter-color: #eb5140;
+$max-width: 550px;
 
 body {
   font-family: "Open Sans", sans-serif;
   background: #e2e2e2;
 }
 
+.login-container {
+  max-width: $max-width;
+  margin: auto;
+}
 .signin-container {
   position: relative;
   width: auto;
-  max-width: 500px;
+  max-width: $max-width;
   height: 330px;
   background: #fff;
   border-radius: 5px;
@@ -50,6 +55,14 @@ input {
       -webkit-transform: translateY(-20px);
       transform: translateY(-20px);
     }
+  }
+}
+
+.error {
+  border-bottom: 1px solid $regiter-color;
+  color: $regiter-color;
+  &::placeholder{
+    color: $regiter-color;
   }
 }
 
@@ -98,11 +111,17 @@ button {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   &:nth-of-type(1) {
-    background: $regiter-colo;
+    background: $regiter-color;
   }
   &:nth-of-type(2) {
     background: $field-color;
   }
+
+  p.error {
+    color: red;
+    text-align: center;
+  }
+
   span {
     position: absolute;
     display: block;
