@@ -1,11 +1,11 @@
 import React from 'react';
-import Singup from './components/Signup';
+import Routing from './routes';
 import Footer from './components/Footer'
 
 const App = () => {
     return (
         <div>
-            <Singup />
+            <Routing />
             <Footer />
         </div>
     )
