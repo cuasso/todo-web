@@ -1,3 +1,4 @@
+import React from 'react'
 import Cookies from 'js-cookie';
 
 const setSessionCookie = (session) => {
@@ -9,4 +10,4 @@ const getSessionCookie = () => { return Cookies.get('session') }
 
 const SessionContext = React.createContext(getSessionCookie())
 
-export default { setSessionCookie, getSessionCookie, SessionContext }
+export { setSessionCookie, getSessionCookie, SessionContext }

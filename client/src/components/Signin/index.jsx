@@ -5,6 +5,7 @@ import Logo from '../Logo'
 import useSingUpForm from '../../hooks/formHooks'
 import useMessage from '../../hooks/showMessage'
 import './style.scss'
+import { setSessionCookie } from '../../session'
 
 const Signin = (props) => {
 
@@ -12,7 +13,10 @@ const Signin = (props) => {
     const signup = () => {
         axios.post('http://localhost:9000/api/authenticate',inputs)
             .then(res => {
-                props.history.push('/')
+                if(res.data.authenticate) {
+                    setSessionCookie({token: res.data.token})
+                    props.history.push('/')
+                }
             })
             .catch(err => {
                 if(err.response) {
