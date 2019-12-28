@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
-import { getSessionCookie, SessionContext } from '../session'
+import { getSessionCookie } from '../common/session'
 import Signin from '../components/Signin'
 import Home from '../components/Home'
 import NotFound from '../components/NotFound'
+import useSession from '../hooks/sessionHook'
 
 
 const history = createBrowserHistory()
+const SessionContext = React.createContext(getSessionCookie())
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
         getSessionCookie() === undefined
-            ? <Redirect to='/login' /> 
+            ? <Redirect to='/login' />
             : <Component {...props} />
     )} />)
 
 const Routing = () => {
 
-    const [session, setSession] = useState(getSessionCookie());
-
-    useEffect(() => {
-        setSession(getSessionCookie());
-    }, [session]);
+    const session = useSession()
 
     return (
         <SessionContext.Provider value={session} >
