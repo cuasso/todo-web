@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 
 const App = () => {
     return (
-        <div>
+        <div style={{ position: "relative", paddingBottom: "250px" }}>
             <Routing />
             <Footer />
         </div>
