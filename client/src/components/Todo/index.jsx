@@ -1,18 +1,5 @@
 import React, { useState, Fragment } from 'react'
-import TodoItem from './TodoItem'
-
-const Form = (props) => {
-    return (
-        <form onSubmit={props.onSubmit} >
-            <spa>Add a Task here!</spa>
-            <input
-                type='text'
-                value={props.value}
-                onChange={props.onChange}
-            />
-        </form>
-    )
-}
+import TodoList from './TodoList'
 
 
 const Todo = () => {
@@ -39,24 +26,13 @@ const Todo = () => {
 
     return (
         <Fragment>
-            <Form
-                onSubmit={handleSubmit}
-                value={value}
-                onChange={e => setValue(e.target.value)}
-            />
-            <ul>
-                {todos.map((todo, index) => (
-                    <TodoItem
-                        key={index}
-                        todo={todo}
-                        remove={() => handleClick({ type: "remove", index })}
-                        completed={() => handleClick({ type: "completed", index })}
-                    />
-                ))}
-            </ul>
+            <form onSubmit={handleSubmit} >
+                <span>Add a Task here!</span>
+                <input type='text' value={value} onChange={e => setValue(e.target.value)} />
+            </form>
+            <TodoList todos={todos} handleClick={handleClick} />
         </Fragment>
     )
 }
-
 
 export default Todo

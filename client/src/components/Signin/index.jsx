@@ -3,7 +3,7 @@ import axios from 'axios'
 import { setSessionCookie } from '../../common/session'
 import ErrorMessage from '../Messages'
 import Logo from '../Logo'
-import useSingUpForm from '../../hooks/formHooks'
+import useSingUpForm from '../../hooks/LoginHook'
 import useMessage from '../../hooks/showMessage'
 import './style.scss'
 
