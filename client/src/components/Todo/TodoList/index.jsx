@@ -1,4 +1,5 @@
 import React from 'react'
+import RemoveButton from '../../Buttons'
 import './style.scss'
 
 
@@ -6,9 +7,9 @@ const TodoItem = (props) => {
     const { name, done } = props.todo
     return (
         <li class='li-todo'>
-            <input type='checkbox'/>
+            <input type='checkbox' />
             <span>{name}</span>
-            <button onClick={props.remove} />
+            <RemoveButton onClick={props.remove} />
         </li>
     )
 }
