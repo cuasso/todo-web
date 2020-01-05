@@ -1,0 +1,26 @@
+.li-todo {
+  margin: 0 auto;
+  width: auto;
+  max-width: 900px;
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 40px auto 40px;
+  grid-gap: 1%;
+  align-content: center;
+  align-items: center;
+  height: fit-content;
+
+  span {
+    max-width: 780px;
+    word-wrap: break-word;
+    grid-column: 2 / 3;
+  }
+
+  button {
+    grid-column: 3 / 4;
+    justify-self: center;
+    height: 50%;
+    width: 50;
+    margin-top: 0;
+  }
+}

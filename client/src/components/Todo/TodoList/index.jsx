@@ -1,16 +1,17 @@
-import React from "react"
+import React from 'react'
+import './style.scss'
+
 
 const TodoItem = (props) => {
     const { name, done } = props.todo
     return (
-        <li >
-            {name}
-            {!done ? <button onClick={props.completed}>Completed</button> : ""}
-            <button onClick={props.remove}>Remove</button>
+        <li class='li-todo'>
+            <input type='checkbox'/>
+            <span>{name}</span>
+            <button onClick={props.remove} />
         </li>
     )
 }
-
 
 const TodoList = (props) => {
     return (
