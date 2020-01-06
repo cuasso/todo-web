@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import TodoList from './TodoList'
+import './style.scss'
 
 
 const Todo = () => {
@@ -27,7 +28,7 @@ const Todo = () => {
     return (
         <Fragment>
             <form onSubmit={handleSubmit} >
-                <span>Add a Task here!</span>
+                <h1>Add a Task here!</h1>
                 <input type='text' value={value} onChange={e => setValue(e.target.value)} />
             </form>
             <TodoList todos={todos} handleClick={handleClick} />

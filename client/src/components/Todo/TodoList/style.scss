@@ -1,4 +1,6 @@
+ul { padding: 0;}
 .li-todo {
+  border-radius: 5px;
   margin: 0 auto;
   margin-top: 15px;
   width: auto;
@@ -11,10 +13,10 @@
   align-items: center;
   height: fit-content;
   position: relative;
-
-  span {
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 3px 0 #B3B3B3;
+  .todo-description {
     max-width: 780px;
-    word-wrap: break-word;
+    word-break: break-word;
     grid-column: 2 / 3;
   }
 

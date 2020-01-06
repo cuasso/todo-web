@@ -9,7 +9,7 @@ const TodoItem = (props) => {
     return (
         <li class='li-todo'>
             <Checkbox index={props.index}/>
-            <span>{name}</span>
+            <span class='todo-description'>{name}</span>
             <RemoveButton onClick={props.remove} />
         </li>
     )
