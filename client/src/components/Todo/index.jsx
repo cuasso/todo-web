@@ -20,7 +20,7 @@ const Todo = () => {
     const handleClick = ({ type, index }) => {
         const newArr = todos.slice()
         if (type === 'remove') newArr.splice(index, 1)
-        else if (type === 'completed') newArr[index].done = true
+        else if (type === 'change') newArr[index].done = !newArr[index].done
 
         return setTodos(newArr)
     }
