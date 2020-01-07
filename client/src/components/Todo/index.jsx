@@ -1,26 +1,11 @@
-import React, { useState, useEffect, Fragment } from 'react'
-import axios from 'axios'
+import React, { Fragment } from 'react'
 import TodoList from './TodoList'
+import useTodo from '../../hooks/todosHook'
 import './style.scss'
 
 
 const Todo = () => {
-    const [todos, setTodos] = useState([])
-    const [value, setValue] = useState('')
-
-    useEffect(() => {
-        axios.get('http://localhost:9000/api/todos')
-            .then(res => {
-                if (res.status === 200) {
-                    setTodos(res.data)
-                }
-            })
-            .catch(err => console.log(err))
-    }, [])
-
-    useEffect(()=> {
-        axios.post('http://localhost:9000/api/todos',todos)
-    },[todos])
+    const { todos, setTodos, value, setValue } = useTodo()
 
     const handleSubmit = event => {
         event.preventDefault()
