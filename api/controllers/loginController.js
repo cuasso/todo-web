@@ -2,6 +2,7 @@ class loginController {
     
     static authenticate(req,res) {
         const {username,password} = req.body
+        //todo: deberia guardar en un bd
         if(username === 'lafken' && password === "123456") 
             return res.status(200).json({
                 authenticate: true,

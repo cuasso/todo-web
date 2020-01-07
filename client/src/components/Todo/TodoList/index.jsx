@@ -5,10 +5,10 @@ import './style.scss'
 
 
 const TodoItem = (props) => {
-    const { name,done,index } = props.todo
+    const { name, done } = props.todo
     return (
         <li class='li-todo'>
-            <Checkbox index={index} value={done} onChange={props.onChange} />
+            <Checkbox index={props.index} value={done} onChange={props.onChange} />
             <span class='todo-description'>{name}</span>
             <RemoveButton onClick={props.remove} />
         </li>
@@ -24,7 +24,7 @@ const TodoList = (props) => {
                     index={index}
                     todo={todo}
                     remove={() => props.handleClick({ type: 'remove', index })}
-                    onChange={() => props.handleClick({ type: 'change', index})}
+                    onChange={() => props.handleClick({ type: 'change', index })}
                 />
             ))}
         </ul>
