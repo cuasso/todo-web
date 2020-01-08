@@ -5,7 +5,8 @@ import todosController from '../controllers/todosController'
 const router = express.Router()
 
 /** LOGIN CONTROLLER **/
-router.post("/api/authenticate",loginController.authenticate)
+router.post("/api/user/authenticate",loginController.authenticate)
+router.post("/api/user/register",loginController.register)
 
 /** TODOS CONTROLLER **/
 router.get("/api/todos",todosController.get)
