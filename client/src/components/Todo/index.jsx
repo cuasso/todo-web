@@ -27,7 +27,7 @@ const Todo = () => {
 
     return (
         <Fragment>
-            <form onSubmit={handleSubmit} >
+            <form class='todo-form' onSubmit={handleSubmit} >
                 <h1>Add a Task here!</h1>
                 <input type='text' value={value} onChange={e => setValue(e.target.value)} />
             </form>

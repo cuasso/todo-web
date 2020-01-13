@@ -12,7 +12,7 @@ const Signin = (props) => {
     const { show, message, showMessage } = useMessage()
 
     const signup = () => {
-        axios.post('http://localhost:9000/api/authenticate', inputs)
+        axios.post('http://localhost:9000/api/user/authenticate', inputs)
             .then(res => {
                 if (res.data.authenticate) {
                     setSessionCookie({ token: res.data.token })
