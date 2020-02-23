@@ -12,8 +12,15 @@ const history = createBrowserHistory()
 const SessionContext = React.createContext(getSessionCookie())
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
-        getSessionCookie() === undefined
+        getSessionCookie().token === undefined
             ? <Redirect to='/login' />
+            : <Component {...props} />
+    )} />)
+
+const LoginRoute = ({ component: Component, ...rest }) => (
+    <Route {...rest} render={(props) => (
+        getSessionCookie().token !== undefined
+            ? <Redirect to='/' />
             : <Component {...props} />
     )} />)
 
@@ -25,7 +32,7 @@ const Routing = () => {
         <SessionContext.Provider value={session} >
             <Router history={history}>
                 <Switch>
-                    <Route path="/login" component={Signin} />
+                    <LoginRoute path="/login" component={Signin} />
                     <PrivateRoute exact path="/" component={Home} />
                     <Route component={NotFound} />
                 </Switch>

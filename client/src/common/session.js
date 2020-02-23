@@ -6,7 +6,10 @@ const setSessionCookie = (session) => {
     Cookies.set('session', session, { expires: 14 })
 }
 
-const getSessionCookie = () => JSON.parse(Cookies.get('session'))
+const getSessionCookie = () => {
+    let actualSession = Cookies.get('session')
+    return actualSession === undefined ? {} : JSON.parse(Cookies.get('session'))
+}
 
 const remoteSessionCookie = () => Cookies.remove('session')
 
