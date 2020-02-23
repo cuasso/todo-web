@@ -1,9 +1,14 @@
 import TodoModel from '../models/todoModel'
 import UsersRepository from './usersRepository'
+import ExpiredSessionError from '../../src/errors/ExpiredSessionError'
 
 class TodoRepository {
     static getTodos(userToken, callback) {
         UsersRepository.get({ activeToken: userToken }, user => {
+            if (user == null){
+                callback(new ExpiredSessionError(`session ${userToken} is expired`))
+                return 
+            }
             TodoModel.findOne({ idUser: user.id }, (err, todos) => {
                 callback(err, todos)
             })

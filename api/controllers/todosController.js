@@ -3,8 +3,8 @@ import TodoRepository from '../db/repositories/todoRepository'
 class todosController {
 
     static get(req, res) {
-        TodoRepository.getTodos(req.params.userToken, (err,todos) => {
-            if(err) return  res.status(504)
+        TodoRepository.getTodos(req.params.userToken, (err, todos) => {
+            if (err) return res.status(504).json(err)
             return res.status(200).json(todos)
         })
     }
