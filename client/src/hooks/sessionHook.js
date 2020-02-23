@@ -6,7 +6,7 @@ const useSession = () => {
     const [session, setSession] = useState(getSessionCookie())
 
     useEffect(() => {
-        setSession(getSessionCookie())
+        setSession(getSessionCookie().token)
     }, [session])
 
     return session
