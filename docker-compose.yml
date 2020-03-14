@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+    mongo:
+        image: mongo
+        ports:
+            - "27017:27017"
+    todo-api:
+        build: 
+            context: ./api            
+        ports: 
+            - "9000:9000"
+        depends_on: 
+            - mongo
+    todo-client:
+        build:
+            context: ./client
+        ports: 
+            - "3000:80"
+        depends_on:
+            - todo-api

@@ -10,8 +10,10 @@
   "author": "Facundo Cuassolo",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

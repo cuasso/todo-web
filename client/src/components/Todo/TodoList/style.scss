@@ -1,0 +1,28 @@
+ul { padding: 0;}
+.li-todo {
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: auto;
+  max-width: 900px;
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 55px auto 115px;
+  grid-gap: 1%;
+  align-content: center;
+  align-items: center;
+  height: fit-content;
+  position: relative;
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 3px 0 #B3B3B3;
+  .todo-description {
+    max-width: 780px;
+    word-break: break-word;
+    grid-column: 2 / 3;
+  }
+
+  .remove-button {
+    grid-column: 3 / 4;
+  }&:hover{
+    grid-column: 3 / 4;
+  }
+}
