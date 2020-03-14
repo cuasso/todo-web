@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-mongoose.connect('mongodb://localhost/tododb', { useNewUrlParser: true, autoIndex: false })
+mongoose.connect('mongodb://mongo:27017/tododb', { useNewUrlParser: true, autoIndex: false })
 
 const db = mongoose.connection;
 
