@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
-mongoose.connect('mongodb://mongo:27017/tododb', { useNewUrlParser: true, autoIndex: false })
+const mongo_db = process.env.MONGO_DB || 'localhost'
+mongoose.connect(`mongodb://${ mongo_db }:27017/tododb`, { useNewUrlParser: true, autoIndex: false })
 
 const db = mongoose.connection;
 
@@ -13,5 +14,3 @@ db.once("open", () => {
 });
 
 export default mongoose
-
-
