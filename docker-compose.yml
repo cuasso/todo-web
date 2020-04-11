@@ -10,7 +10,11 @@ services:
             context: ./api            
         ports: 
             - "9000:9000"
-        depends_on: 
+        environment: 
+            - "MONGO_DB=mongo"
+        volumes: 
+            - ./mongo-data:/data/db
+        depends_on:
             - mongo
     todo-client:
         build:
