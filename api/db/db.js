@@ -1,7 +1,8 @@
 import mongoose from 'mongoose'
+import { mongoDb } from '../src/config'
 
-const mongo_db = process.env.MONGO_DB || 'localhost'
-mongoose.connect(`mongodb://${ mongo_db }:27017/tododb`, { useNewUrlParser: true, autoIndex: false })
+mongoose.connect(
+    `mongodb://${mongoDb}:27017/tododb`, { useNewUrlParser: true, autoIndex: false })
 
 const db = mongoose.connection;
 
