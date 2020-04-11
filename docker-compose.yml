@@ -5,6 +5,8 @@ services:
         image: mongo
         ports:
             - "27017:27017"
+        volumes: 
+            - ./mongo-data:/data/db
     todo-api:
         build: 
             context: ./api            
@@ -12,8 +14,7 @@ services:
             - "9000:9000"
         environment: 
             - "MONGO_DB=mongo"
-        volumes: 
-            - ./mongo-data:/data/db
+
         depends_on:
             - mongo
     todo-client:
