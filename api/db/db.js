@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
+import { mongoDb } from '../src/config'
 
-mongoose.connect('mongodb://mongo:27017/tododb', { useNewUrlParser: true, autoIndex: false })
+mongoose.connect(
+    `mongodb://${mongoDb}:27017/tododb`, { useNewUrlParser: true, autoIndex: false })
 
 const db = mongoose.connection;
 
@@ -13,5 +15,3 @@ db.once("open", () => {
 });
 
 export default mongoose
-
-
